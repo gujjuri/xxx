@@ -10,15 +10,26 @@
   <meta name="description" content="The HTML5 Herald">
   <meta name="author" content="SitePoint">
 
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>
+ 
   <script type="text/javascript">
-  function go(loc) {
-    //document.getElementById('calendar').src = loc;
-    calendar.src = loc;
-  }
-  </script>
+function iframeDidLoad() {
+    alert('Done');
+}
+
+function newSite() {
+    var sites = ['http://getprismatic.com',
+                 'http://gizmodo.com/',
+                 'http://lifehacker.com/']
+
+    document.getElementById('myIframe').src = sites[Math.floor(Math.random() * sites.length)];
+}    
+</script>
   
 </head>
+  
+  
+<input type="button" value="Change site" onClick="newSite()" />
+<iframe id="myIframe" src="http://getprismatic.com/" onLoad="iframeDidLoad();"></iframe>
   
   
 
@@ -26,21 +37,18 @@
   <div style="position: absolute; overflow: hidden; left: 0px; top: 0px; border: solid 2px #555; width:594px; height:332px;">
 <div style="overflow: hidden; margin-top: -100px; margin-left: -25px;">
 </div>
-<iframe id="calendar" src= "about:blank" scrolling="no" style="height: 490px; border: 0px none; width: 619px; margin-top: -60px; margin-left: -24px; ">
-</iframe>
+    
+   <input type="button" value="Change site" onClick="newSite()" />
+<iframe id="myIframe" src="http://getprismatic.com/" onLoad="iframeDidLoad();"></iframe> 
+
    
 </div>
 </div>
-   <div>
-  <form method="post">
-    <input name="calendarSelection" type="radio" onchange="go('https://anybunny.tv/movie/799368/andreina-deluxe-gets-fucked-reverse-cowgirl-style-in-pov.html')">
-    andreina-deluxe-gets-fucked-reverse-cowgirl
-    </input>
    
-  </form>
-</div>
 </body>
 </html>
 
 
+<!--  <iframe id="calendar" src= "about:blank" scrolling="no" style="height: 490px; border: 0px none; width: 619px; margin-top: -60px; margin-left: -24px; ">
+</iframe> Document Header Ends  -->
 
